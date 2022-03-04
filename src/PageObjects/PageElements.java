@@ -21,5 +21,15 @@ public class PageElements {
 
 		return "//a[@data-cy='breadcrumb-country"	;
 	}
+	
+	public static String allwinesOnSearchresult() {
+
+		return "//a[@data-cartitemsource='text-search' and @class='link-color-alt-grey']"	;
+	}
+	
+	public static String allwinesCountrynameOnSearchresult() {
+
+		return "//a[@data-item-type='country']"	;
+	}
 }
 

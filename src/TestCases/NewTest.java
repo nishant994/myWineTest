@@ -24,7 +24,7 @@ public class NewTest extends Abstract{
 		command.EnterValueandPressEnter(driver, PageElements.SearchField(),  searchKey);
 
 		//############################# Below code is to listout the Wine name ##################################
-		List<WebElement> wineelement=driver.findElements(By.xpath("//a[@data-cartitemsource='text-search' and @class='link-color-alt-grey']"));
+		List<WebElement> wineelement=driver.findElements(By.xpath(PageElements.allwinesOnSearchresult()));
 		System.out.println("size==========="+wineelement.size());
 		List<String> winelist = new ArrayList<String>();
 
@@ -34,7 +34,7 @@ public class NewTest extends Abstract{
 		}
 
 		//##################### Below code is to listout the corresponding country name ###########################
-		List<WebElement> countryelement=driver.findElements(By.xpath("//a[@data-item-type='country']"));
+		List<WebElement> countryelement=driver.findElements(By.xpath(PageElements.allwinesCountrynameOnSearchresult()));
 
 		List<String> countryList = new ArrayList<String>();
 		for(WebElement countryelementVlaue:countryelement ) {
